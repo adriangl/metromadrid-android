@@ -1,0 +1,213 @@
+package com.agl.metromadrid;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.PixelFormat;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class Resultados extends Activity{
+	
+	private TextView texto_orig;
+	private TextView texto_dest;
+	private TextView texto_dur;
+	private TextView texto_estaciones;
+	
+	private final static int NO_CONNECTION_ID = 0;
+	
+	private String request;
+	
+	public void onCreate(Bundle savedInstanceState) {
+		
+		super.onCreate(savedInstanceState);
+        setContentView(R.layout.results);
+        
+        texto_orig = (TextView)findViewById(R.id.text_origen);
+        texto_dest = (TextView)findViewById(R.id.text_destino);
+        texto_dur = (TextView)findViewById(R.id.text_duracion);
+        texto_estaciones = (TextView)findViewById(R.id.text_numero);
+        
+        Bundle b = this.getIntent().getExtras();
+        
+        String tipo_origen = (String) b.get("TIPO_ORIGEN");
+        String tipo_destino = (String) b.get("TIPO_DESTINO");
+        
+        request = this.getString(R.string.result_url);
+        
+        // Procesamos y construimos la URL en función de los datos.
+        // Emplear si en un futuro se usan otros parámetros de búsqueda
+        if (tipo_origen.equals("ESTACION")){
+        	Estacion origen = (Estacion) b.get("ORIGEN");
+        	texto_orig.setText(origen.getNombre());
+        	request+="rbOrigen=estacion&idOrigen="+origen.getCodigo();
+        	request+="&calle=+Introduce+una+calle...&numeroOrigen=nº&cmbCiudadOrigen=Madrid&lugar=+Introduce+un+lugar...";
+        }
+        
+        if (tipo_destino.equals("ESTACION")){
+        	Estacion destino = (Estacion) b.get("DESTINO");
+        	texto_dest.setText(destino.getNombre());
+        	request+="&rbDestino=estacion&idDestino="+destino.getCodigo();
+        	request+="&calle2=+Introduce+una+calle...&numeroDestino=nº&cmbCiudadDestino=Madrid&lugar2=+Introduce+un+lugar...";
+        }
+        request+="&vext=14853501"+"&fechBuscar=12/09/2013&field=date"+/*"&cmbTipoDia="+b.get("TIPO_DIA")+*/"&cmbHora="+b.get("HORA")+
+        			"&cmbMinutos="+b.get("MINUTOS")+"&rbTipoRuta="+b.get("TIPO_VIAJE")+
+        			"&buscar=Ver+trayecto";
+        
+        // Iniciamos conexión
+        new ResultTask().execute(request);        
+        
+	}
+	
+	@Override
+	public void onAttachedToWindow() {
+		super.onAttachedToWindow();
+		Window window = getWindow();
+		window.setFormat(PixelFormat.RGBA_8888);
+	}
+	
+	
+	@Override
+	protected Dialog onCreateDialog(int id) {
+	    switch (id) {
+	    case NO_CONNECTION_ID:
+	    	AlertDialog.Builder builder = new AlertDialog.Builder(this);		
+			builder.setMessage(getString(R.string.no_internet_message))
+					.setTitle(getString(R.string.no_internet_title))
+					.setCancelable(false)
+					.setNegativeButton(getString(R.string.back), new DialogInterface.OnClickListener() {
+				           public void onClick(DialogInterface dialog, int id) {
+				        	  Resultados.this.finish();
+				           }
+				       })			
+					.setPositiveButton(getString(R.string.enable_network), new DialogInterface.OnClickListener() {				
+						public void onClick(DialogInterface dialog, int id) {
+							dialog.dismiss();
+							startActivity(new Intent(Settings.ACTION_WIRELESS_SETTINGS));
+						}
+					});			
+			return builder.create();
+	    }
+	    return null;
+	}
+	
+	
+	public void onRestart(){
+    	// tras volver de otra actividad, refrescamos contenido
+    	super.onRestart();
+    	if (!ConnectionManager.hayConexion(this)){
+        	showDialog(NO_CONNECTION_ID);
+        }
+        else {
+        	if (texto_dur.getText().equals("")){
+        		new ResultTask().execute(request);
+        	}
+        }
+    }
+
+	private void inflarLista(int layout, ArrayList<Entrada> entradas) {
+		LinearLayout list = (LinearLayout)findViewById(layout);
+		if (entradas!=null){
+	        for (int i=0; i<entradas.size(); i++) {
+	          Entrada e = entradas.get(i);
+	          View vi = LayoutInflater.from(this).inflate(R.layout.row, null);
+	          if (e != null) {
+	              TextView texto = (TextView) vi.findViewById(R.id.texto_fila);
+	              TextView duracion = (TextView) vi.findViewById(R.id.duracion_fila);
+	              if (texto != null) {
+	            	  texto.setText(e.getTexto());                            
+	              }
+	              if(duracion != null){
+	            	if (e.getDuracion()!=null && e.getDuracion().equals("&nbsp;")){
+	            		duracion.setText("");
+	            	}else{
+	            		duracion.setText(e.getDuracion());
+	            	}
+	            	
+	              }
+	          }
+	          if (i % 2 == 0) {
+	        	  vi.setBackgroundResource(R.color.light_blue);
+	          }
+	          else{
+	        	  vi.setBackgroundResource(R.color.light_gray);
+	          }
+	          list.addView(vi);
+	          View vie = LayoutInflater.from(this).inflate(R.layout.separator, null);
+	          list.addView(vie);
+	        }
+		}
+		else{
+			View vi = LayoutInflater.from(this).inflate(R.layout.row, null);
+			TextView texto = (TextView) vi.findViewById(R.id.texto_fila);
+			texto.setText(getString(R.string.no_coincidences));
+			list.addView(vi);
+		}
+	}	
+	
+	private class ResultTask extends AsyncTask<String,Void,Integer>{
+		
+		private ProgressDialog d;
+		private Ruta r = new Ruta();
+		
+		@Override
+		protected void onPreExecute(){
+			d = ProgressDialog.show(Resultados.this,getString(R.string.parse_title), 
+                    getString(R.string.result_message), true);
+			d.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+			d.show();
+		}
+		
+		@Override
+		protected Integer doInBackground(String... list) {
+			if (ConnectionManager.hayConexion(Resultados.this)){
+				ParserHTMLResultados p = new ParserHTMLResultados(list[0]);
+	        	r = p.getRuta();
+	            return 1;
+			}
+			else{
+				return 0;
+			}
+		}
+
+		
+		protected void onPostExecute(Integer n){
+			d.dismiss();
+			if (n==0){
+				showDialog(NO_CONNECTION_ID);
+			}
+			else{
+	        	ArrayList<Entrada> entradasOrigen = r.getEntradasOrigen();
+	            ArrayList<Entrada> entradasMetro = r.getEntradasMetro();
+	            ArrayList<Entrada> entradasDestino = r.getEntradasDestino();
+	            if (entradasOrigen.size()==0){
+	            	inflarLista(R.id.layout_origen,null);
+	                inflarLista(R.id.layout_metro,null);
+	                inflarLista(R.id.layout_destino,null);        
+	                texto_dur.setText(getString(R.string.unavailable));
+	            }
+	            else{
+	    	        inflarLista(R.id.layout_origen,entradasOrigen);
+	    	        inflarLista(R.id.layout_metro,entradasMetro);
+	    	        inflarLista(R.id.layout_destino,entradasDestino);
+	    	        texto_dur.setText(r.getDuracionTotal());
+	            }        
+	            texto_estaciones.setText(Integer.toString(r.getNumeroEstaciones())+" "+getString(R.string.station_locale));
+			}
+		}
+		
+	}
+	
+	
+}

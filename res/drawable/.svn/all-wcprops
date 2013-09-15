@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable
+END
+ic_schema.png
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable/ic_schema.png
+END
+ic_map_tab_schematic.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable/ic_map_tab_schematic.xml
+END
+ic_carto.png
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable/ic_carto.png
+END
+ic_map_tab_carto.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable/ic_map_tab_carto.xml
+END
+ic_menu_info_details.png
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable/ic_menu_info_details.png
+END
+red_gradient.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable/red_gradient.xml
+END
+custom_button.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable/custom_button.xml
+END
+ic_menu_close_clear_cancel.png
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable/ic_menu_close_clear_cancel.png
+END
+ic_carto_selected.png
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable/ic_carto_selected.png
+END
+white_gradient.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable/white_gradient.xml
+END
+ic_schema_selected.png
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable/ic_schema_selected.png
+END

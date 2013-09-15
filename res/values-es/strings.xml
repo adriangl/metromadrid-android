@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- About the App Strings -->
+	<string name="about_app_message">Desarrollada por Adrián García López.\n\nadriangarcia.lopez@gmail.com</string>
+	<string name="about_app_title">Acerca de...</string>
+	<string name="app_name">Metro Madrid</string>
+    <string name="app_version">1.1</string>
+<!-- General Purpose String Resources -->
+    <string name="about">Acerca de...</string>    
+    <string name="preferences">Preferencias</string>
+    <string name="quit">Salir</string>
+    <string name="result_url">http://www.metromadrid.es/es/viaja_en_metro/trayecto_recomendado/resultado.html?</string>
+	<string name="search_name">Búsqueda</string>
+<!-- Main Menu Strings -->
+	<string name="find_route">Consultar ruta</string>
+	<string name="view_map">Ver plano de Metro</string>
+<!-- Map Menu Strings -->
+	<string name="schematic_map">Ver mapa esquemático</string>
+	<string name="cartographic_map">Ver mapa cartográfico</string>
+<!-- Metro Find Route Strings -->  
+    <string name="select_origin">Elige estación de origen</string>
+    <string name="select_destination">Elige estación destino</string>
+    <string name="select_preferences">Preferencias del viaje</string>
+    <string name="day_type">Tipo de día</string>
+    <string name="hour">Hora</string>
+    <string name="route_type">Tipo de ruta</string>
+    <string name="submit_button">¡Vuela!</string>   
+    <string name="station_prompt">Estación</string>
+    <string name="day_prompt">Elige el tipo de día</string>
+    <string name="route_prompt">Elige el tipo de ruta</string>    
+    <string name="search_by_name">Búsqueda de estaciones</string>
+<!-- Metro Results Screen Strings -->
+	<string name="origin_station">Estación de origen:</string>
+	<string name="destination_station">Estación de destino:</string>
+	<string name="total_time">Duración total:</string>
+	<string name="station_number">Número de estaciones:</string>
+	<string name="origin_route">Tramo en origen</string>
+	<string name="metro_route">Tramo en Metro</string>
+	<string name="destination_route">Tramo en destino</string>
+<!-- Dialog Strings -->
+	<string name="accept_button">Aceptar</string>
+	<string name="no_internet_message">No hay conexión a Internet. ¿Desea activar la conexión?</string>
+	<string name="no_internet_db_message">No se dispone de conexión de red. La base de datos no pudo ser actualizada.</string>
+	<string name="no_internet_title">Sin conexión a la red</string>
+	<string name="close_app">Cerrar aplicación</string>
+	<string name="enable_network">Activar conexión</string>
+	<string name="same_stations_message">Las estaciones seleccionadas son iguales; por favor, seleccione estaciones distintas.</string>
+	<string name="same_stations_title">Error en la entrada de datos</string>
+	<string name="no_data_message">No existe la base de datos. ¿Desea crearla?</string>
+	<string name="no_data_title">Error en la base de datos</string>
+	<string name="update_db">Actualizar base de datos</string>
+	<string name="parse_title">Espere...</string>
+	<string name="parse_message">Cargando datos...</string>
+	<string name="station_search">Búsqueda de estaciones</string>
+	<string name="search_hint">Buscar...</string>
+	<string name="back">Atrás</string>
+	<string name="result_message">Calculando ruta...</string>
+	<string name="no_coincidences">No se encontraron coincidencias.</string>
+	<string name="unavailable">No disponible</string>
+	<string name="station_locale">estación(es)</string>
+<!-- Preferences Strings -->
+	<string name="update_at_startup_title">Actualizar al inicio</string>
+	<string name="update_at_startup_summary">Habilitar la actualización de la base de datos de estaciones de forma periódica al iniciar la aplicación.</string>
+	<string name="update_frequency_title">Tiempo de actualización</string>
+	<string name="update_frequency_summary">Ajusta la frecuencia de actualización de la base de datos de estaciones</string>
+	<string name="update_now_title">Actualizar ahora</string>
+	<string name="update_now_summary">Actualiza de forma manual la base de datos de estaciones.</string>
+	<string name="last_update_title">Última actualización</string>
+<!-- Tab Screen Strings -->
+	<string name="schematic_tab">Esquemático</string>
+	<string name="carto_tab">Cartográfico</string>
+</resources>

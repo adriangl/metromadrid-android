@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid
+END
+Ruta.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/Ruta.java
+END
+ConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/ConnectionManager.java
+END
+ParserHTMLResultados.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/5/trunk/MetroMadrid/src/com/agl/metromadrid/ParserHTMLResultados.java
+END
+UpdateTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/UpdateTask.java
+END
+MetroCartographicMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/MetroCartographicMap.java
+END
+ParserHTMLEstacion.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/ParserHTMLEstacion.java
+END
+MetroSchematicMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/MetroSchematicMap.java
+END
+Resultados.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/Resultados.java
+END
+MetroMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/5/trunk/MetroMadrid/src/com/agl/metromadrid/MetroMap.java
+END
+Estacion.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/Estacion.java
+END
+SearchDialogActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/SearchDialogActivity.java
+END
+MetroForm.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/MetroForm.java
+END
+ParserEstacionMetro.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/ParserEstacionMetro.java
+END
+Main.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/Main.java
+END
+EntradaAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/EntradaAdapter.java
+END
+Entrada.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/Entrada.java
+END
+Preferencias.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/3/trunk/MetroMadrid/src/com/agl/metromadrid/Preferencias.java
+END

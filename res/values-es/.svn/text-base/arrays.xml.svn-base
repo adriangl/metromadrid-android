@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="day_array">
+        <item>Laborables</item>
+        <item>Sábados</item>
+        <item>Domingos y festivos</item>
+    </string-array>
+    
+    <string-array name="route_array">
+        <item>Más rápida</item>
+        <item>Con menos trasbordos</item>
+        <item>Con menor distancia</item>
+    </string-array>
+    
+    <string-array name="timeArray">
+        <item>Cada mes</item>
+        <item>Cada 2 meses</item>
+        <item>Cada 3 meses</item>
+        <item>Cada 6 meses</item>
+        <item>Cada año</item>
+    </string-array>
+    
+    <string-array name="timeValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+        <item>12</item>
+    </string-array>
+</resources>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable-ldpi
+END
+ic_schema.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable-ldpi/ic_schema.png
+END
+icon.png
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable-ldpi/icon.png
+END
+ic_carto.png
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable-ldpi/ic_carto.png
+END
+logometro.png
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/3/trunk/MetroMadrid/res/drawable-ldpi/logometro.png
+END
+ic_carto_selected.png
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable-ldpi/ic_carto_selected.png
+END
+ic_schema_selected.png
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/5/trunk/MetroMadrid/res/drawable-ldpi/ic_schema_selected.png
+END

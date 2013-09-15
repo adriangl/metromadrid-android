@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="day_array">
+        <item>Working days</item>
+        <item>Saturdays</item>
+        <item>Sundays and bank holidays</item>
+    </string-array>
+    
+    <string-array name="route_array">
+        <item>Fastest route</item>
+        <item>Less train changes</item>
+        <item>Shortest route</item>
+    </string-array>
+    
+    <string-array name="timeArray">
+        <item>Every month</item>
+        <item>Every 2 months</item>
+        <item>Every 3 months</item>
+        <item>Every 6 months</item>
+        <item>Every year</item>
+    </string-array>
+    
+    <string-array name="timeValues">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>6</item>
+        <item>12</item>
+    </string-array>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <!--  Panel de preferencias -->
+  <PreferenceCategory
+      android:title="@string/preferences">
+      <CheckBoxPreference
+              android:title="@string/update_at_startup_title"
+              android:summary="@string/update_at_startup_summary"
+              android:key="startupUpdate"              
+              android:defaultValue="true" />
+      <ListPreference
+              android:title="@string/update_frequency_title"
+              android:summary="@string/update_frequency_summary"
+              android:key="updateTime"
+              android:defaultValue="1"
+              android:entries="@array/timeArray"
+              android:entryValues="@array/timeValues"/>
+       <Preference
+       		  android:title="@string/update_now_title"
+              android:summary="@string/update_now_summary"
+              android:key="updateNow"
+        />
+        <Preference
+       		  android:title="@string/last_update_title"
+              android:key="lastUpdate"
+              android:selectable="false"
+        />
+   </PreferenceCategory>
+  
+  
+</PreferenceScreen>

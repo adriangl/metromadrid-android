@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.agl.metromadrid"
+      android:versionCode="1"
+      android:versionName="1.0"
+      android:screenOrientation="portrait">
+	<!-- <uses-library android:name="com.google.android.maps"/>  -->
+    <uses-permission 
+    	android:name="android.permission.INTERNET" 
+    />
+    <uses-permission 
+    	android:name="android.permission.ACCESS_NETWORK_STATE" 
+    />
+    <application android:icon="@drawable/icon" 
+    			 android:theme="@android:style/Theme.NoTitleBar"
+    			 android:label="@string/app_name">
+        <activity android:name=".Main"
+                  android:label="@string/app_name"                  
+    			  android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name=".MetroForm"
+                  android:label="@string/app_name"                  
+    			  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name=".SearchDialogActivity"
+        		  android:label="@string/search_name"
+        		  android:theme="@android:style/Theme.Dialog"
+    			  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name=".Resultados"
+                  android:label="@string/app_name"
+    			  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name=".MetroMap"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name=".Preferencias"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+       	
+       	<activity android:name=".MetroSchematicMap"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+        
+        <activity android:name=".MetroCartographicMap"
+                  android:label="@string/app_name"
+                  android:screenOrientation="portrait">
+        </activity>
+
+    </application>
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"/>
+
+</manifest> 

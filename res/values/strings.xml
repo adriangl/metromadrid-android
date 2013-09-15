@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- About the App Strings -->
+	<string name="about_app_message">Developed by Adrián García López.\n\nadriangarcia.lopez@gmail.com</string>
+	<string name="about_app_title">About...</string>
+	<string name="app_name">Metro Madrid</string>
+    <string name="app_version">1.1</string>
+<!-- General Purpose String Resources -->
+    <string name="about">About...</string>    
+    <string name="preferences">Settings</string>
+    <string name="quit">Quit</string>
+    <string name="result_url">http://www.metromadrid.es/en/viaja_en_metro/trayecto_recomendado/resultado.html?</string>
+	<string name="search_name">Search</string>
+<!-- Main Menu Strings -->
+	<string name="find_route">Find route</string>
+	<string name="view_map">View Metro Map</string>
+<!-- Map Menu Strings -->
+	<string name="schematic_map">View schematic map</string>
+	<string name="cartographic_map">View cartographic map</string>
+<!-- Metro Find Route Strings -->  
+    <string name="select_origin">Choose starting station</string>
+    <string name="select_destination">Choose destination station</string>
+    <string name="select_preferences">Trip settings</string>
+    <string name="day_type">Day type</string>
+    <string name="hour">Hour</string>
+    <string name="route_type">Route type</string>
+    <string name="submit_button">Fly!</string>   
+    <string name="station_prompt">Station</string>
+    <string name="day_prompt">Choose day type</string>
+    <string name="route_prompt">Choose route type</string>    
+    <string name="search_by_name">Station search</string>
+<!-- Metro Results Screen Strings -->
+	<string name="origin_station">Starting station:</string>
+	<string name="destination_station">Destination station:</string>
+	<string name="total_time">Estimated time:</string>
+	<string name="station_number">Route:</string>
+	<string name="origin_route">Section at origin</string>
+	<string name="metro_route">Section by underground</string>
+	<string name="destination_route">section at destination</string>
+<!-- Dialog Strings -->
+	<string name="accept_button">Accept</string>
+	<string name="no_internet_message">There\'s no network connection. Do you want to turn network on?</string>
+	<string name="no_internet_db_message">There\'s no network connection. The database could not be updated.</string>
+	<string name="no_internet_title">No network connection</string>
+	<string name="close_app">Close</string>
+	<string name="enable_network">Enable network</string>
+	<string name="same_stations_message">The chosen stations are the same. Please choose different stations.</string>
+	<string name="same_stations_title">Input error</string>
+	<string name="no_data_message">The database has not been found. Do you want to create one?</string>
+	<string name="no_data_title">Database error</string>
+	<string name="update_db">Update database</string>
+	<string name="parse_title">Please wait...</string>
+	<string name="parse_message">Loading data...</string>
+	<string name="station_search">Station search</string>
+	<string name="search_hint">Search...</string>
+	<string name="back">Back</string>
+	<string name="result_message">Retrieving route...</string>
+	<string name="no_coincidences">No coincidences found.</string>
+	<string name="unavailable">Unavailable</string>
+	<string name="station_locale">station(s)</string>
+<!-- Preferences Strings -->
+	<string name="update_at_startup_title">Update at startup</string>
+	<string name="update_at_startup_summary">Enable periodic stations\' database update at startup.</string>
+	<string name="update_frequency_title">Update interval</string>
+	<string name="update_frequency_summary">Adjust database refresh interval.</string>
+	<string name="update_now_title">Update now</string>
+	<string name="update_now_summary">Manually update stations\' database.</string>
+	<string name="last_update_title">Last update</string>
+<!-- Tab Screen Strings -->
+	<string name="schematic_tab">Schematic</string>
+	<string name="carto_tab">Cartographic</string>
+</resources>
